@@ -1,0 +1,15 @@
+*.zip
+*.pkl
+*.ckpt
+*.json
+*.pyc
+*.npy
+*.gif
+*.out
+*.ipynb
+/.vscode
+/ovo.egg-info
+/outputs
+!tools/prompt_embedding/*.json
+!ovo/data/NYU/*.json
+!ovo/data/semantic_kitti/*.json

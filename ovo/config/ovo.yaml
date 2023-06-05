@@ -1,0 +1,52 @@
+#dataset: "NYU", "kitti"
+dataset: "NYU"
+
+n_relations: 4
+
+enable_log: true
+kitti_root: '/path/to/semantic_kitti'
+kitti_preprocess_root: '/path/to/kitti/preprocess/folder'
+kitti_logdir: '/path/to/semantic_kitti/logdir'
+
+NYU_root: '/path/to/NYU/depthbin'
+NYU_preprocess_root: '/path/to/NYU/preprocess/folder'
+logdir: '/path/to/NYU/logdir'
+
+
+fp_loss: true 
+frustum_size: 8 
+batch_size: 1
+n_gpus: 1
+num_workers_per_gpu: 3 
+exp_prefix: "exp"
+run: 1
+lr: 1e-4
+weight_decay: 1e-3 # Original lr = 1e-4
+
+context_prior: true
+
+relation_loss: true 
+CE_ssc_loss: true
+sem_scal_loss: true
+geo_scal_loss: true
+
+project_1_2: true
+project_1_4: true
+project_1_8: true
+
+mask_weight: 20
+dice_weight: 1
+
+# OVO full model
+with_ov: true
+confidence_weight: true
+voxel_pixel_align: true
+voxel_word_align: true
+align_2d: true
+VPA_weight: 1.0
+NYU_prepare_total: /data/nyu_preprocess_total
+kitti_prepare_total: /data/kitti_preprocess_total_mini_30
+
+# visualization and miou
+vis: false
+miou: true

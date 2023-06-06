@@ -1,6 +1,6 @@
 # Open-Vocabulary Occupancy
 
-This repo is the official implementation of: [OVO: Open-Vocabulary Occupancy](https://arxiv.org/abs/2305.16133)
+This repo is the official implementation of [OVO: Open-Vocabulary Occupancy](https://arxiv.org/abs/2305.16133)
 
 > OVO: Open-Vocabulary Occupancy
 > 
@@ -8,9 +8,9 @@ This repo is the official implementation of: [OVO: Open-Vocabulary Occupancy](ht
 
 ## Introduction
 
-Open Vocabulary Occupancy (OVO) is a novel approach that enables semantic occupancy prediction for arbitrary classes without the need for 3D annotations during training. The key components of our approach are: (1) knowledge distillation from a pre-trained 2D open-vocabulary segmentation model to the 3D occupancy network, and (2) pixel-voxel filtering for generating high-quality training data. The resulting framework is simple, compact, and compatible with most state-of-the-art semantic occupancy prediction models. On the NYUv2 and SemanticKITTI datasets, OVO achieves competitive performance compared to supervised semantic occupancy prediction approaches. Additionally, extensive analyses and ablation studies are conducted to provide insights into the design of the proposed framework.
+Semantic occupancy prediction aims to infer dense geometry and semantics of surroundings for an autonomous agent to operate safely in the 3D environment. Existing occupancy prediction methods are almost entirely trained on human-annotated volumetric data. Although of high quality, the generation of such 3D annotations is laborious and costly, restricting them to a few specific object categories in the training dataset. 
 
-OVO enables knowledge distillation from a pre-trained 2D open-vocabulary segmentation model to the 3D occupancy network. We also propose a simple yet effective voxel filtering mechanism for high-quality training data selection. The whole pipeline is trained end-to-end and only the parameters of the 3D occupancy network will be updated. Red dashed arrows indicate the backward pass for the three feature alignment losses. During inference, text embeddings (bottom row) of both base and novel categories can be used to predict the semantic label for each voxel.
+We propose Open Vocabulary Occupancy (OVO), a novel approach that allows semantic occupancy prediction of arbitrary classes but without the need for 3D annotations during training. Keys to our approach are (1) knowledge distillation from a pre-trained 2D open-vocabulary segmentation model to the 3D occupancy network, and (2) pixel-voxel filtering for high-quality training data generation. The resulting framework is simple, compact, and compatible with most state-of-the-art semantic occupancy prediction models. 
 
 ![](assets/model.png)
 

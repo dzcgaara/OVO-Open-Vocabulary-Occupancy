@@ -59,7 +59,7 @@ We propose Open Vocabulary Occupancy (OVO), a novel approach that allows semanti
 
 1. Generate LSeg embedding.
 
-   Refer to [CLIP](https://github.com/openai/CLIP) and [get_img_embedding.py](tools/get_img_embedding.py).
+   Refer to [LSeg](https://github.com/isl-org/lang-seg).
 
 2. Generate prompt embedding.
 
